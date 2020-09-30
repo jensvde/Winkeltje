@@ -1,0 +1,29 @@
+@model System.Collections.Generic.List<Domain.Vakantie>
+
+@{
+    ViewBag.Title = "Vakanties";
+    Layout = "_Layout";
+}
+
+<h2>Vakanties</h2>
+<p>Een overzicht van alle vakanties</p>
+<br/>
+
+<table class="table" id="table">
+    <tr >
+        <th>VakantieId</th>
+        <th>Startdatum</th>
+        <th>Einddatum</th>
+        <th>Reden</th>
+    </tr>
+    
+    @foreach (Domain.Vakantie vakantie in Model.ToList())
+    {
+        <tr class="text-auto-even">
+            <td><a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditVakantie" asp-route-id="@vakantie.VakantieId"><p class="card-text">@vakantie.VakantieId</p></a></td>
+            <td><a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditVakantie" asp-route-id="@vakantie.VakantieId"><p class="card-text">@vakantie.startDatum.ToString("d")</p></a></td>
+            <td><a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditVakantie" asp-route-id="@vakantie.VakantieId"><p class="card-text">@vakantie.eindDatum.ToString("d")</p></a></td>
+            <td><a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditVakantie" asp-route-id="@vakantie.VakantieId"><p class="card-text">@vakantie.reden</p></a></td>
+        </tr>
+    }
+</table> 

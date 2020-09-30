@@ -1,0 +1,63 @@
+﻿@using Domain
+ 
+@model Winkeltje.Models.WinkelViewModel
+@{
+    ViewBag.Title = "Bewerk product";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+<p>Bewerk de details voor @Model.Product.Naam</p>
+<br />
+<h3>Productdetails</h3>
+<form asp-controller="Database" asp-action="EditProduct" enctype="multipart/form-data" asp-route-id="@Model.Product.ProductId" method="post">
+    <div class="div-container">
+        <div class="div-left">
+            <dl class="dl-horizontal">
+                <dt class="dd-dt"><label for="Naam">Naam</label></dt>
+                <dd class="dd-dt"><textarea asp-for="Product.Naam" cols="125" rows="1" class="inputdetails"></textarea></dd>
+                <dt class="dd-dt"><label for="Beschrijving">Beschrijving</label></dt>
+                <dd class="dd-dt"><textarea asp-for="Product.Beschrijving" cols="125" rows="5" class="inputdetails"></textarea></dd>
+                <dt class="dd-dt"><label>Huidige afbeelding</label></dt>
+                <dd class="dd-dt"><img class="card-img-top" style="max-height: 50%" src="@Url.Action("getImg", "Product", new {id = @Model.Product.ProductId})" alt="@Model.Product.Naam"></dd>
+                <dt class="dd-dt"><label for="ImageFile">Wijzig afbeelding</label></dt>
+                <dd class="dd-dt"><input asp-for="ImageFile" class="inputdetails" accept="image/*" /></dd>
+            </dl>
+        </div>
+    </div>
+    <h3>Allergenen</h3>
+    <div class="div-container">
+        <div class="div-right">
+            <dl class="dl-horizontal">
+                @{
+                    for (int i = 0; i < Model.SelectedAllergies.Count; i++)
+                    {
+                        if (i % 2 == 0 && i != 0)
+                        {
+                        @:</dl>
+                    @:</div>
+                    @:<div class="div-right">
+                        @:<dl class="dl-horizontal">
+                        }
+
+                        <dt class="dd-dt">
+                            <label asp-for="@Model.SelectedAllergies[i].Selected">@Model.SelectedAllergies[i].Name</label>
+                        </dt>
+                        <dd class="dd-dt">
+                            <input type="checkbox" asp-for="@Model.SelectedAllergies[i].Selected" />
+                            <input type="hidden" asp-for="@Model.SelectedAllergies[i].Id" />
+                            <input type="hidden" asp-for="@Model.SelectedAllergies[i].Name" />
+                        </dd>
+
+                    }
+                }
+            </dl>
+        </div>
+
+    </div>
+    <div class="div-buttons">
+        <input type="submit" value="Opslaan" class="btn btn-dark" />&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="DeleteProduct" asp-route-id="@Model.Product.ProductId">Verwijder</a>
+    </div>
+
+</form>

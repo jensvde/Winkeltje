@@ -1,0 +1,35 @@
+﻿@using Domain
+@model List<HomeImage>
+@{
+    ViewBag.Title = "Startpagina afbeeldingen";
+    Layout = "_Layout";
+}
+
+<br />
+
+@{
+    int count = 0;
+    @:<div class="card-deck">
+        foreach (HomeImage homeImage in @Model)
+        {
+            @:<div class="card">
+                <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditHomeImage" asp-route-id="@homeImage.HomeImageId"><img class="card-img-top" src="@Url.Action("getImg", "Home", new {id = homeImage.HomeImageId})" alt="@homeImage.Text"></a>
+                @:<div class="card-body">
+                    <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditHomeImage" asp-route-id="@homeImage.HomeImageId"><h5 class="card-title">@homeImage.Text</h5></a>
+                    <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditHomeImage" asp-route-id="@homeImage.HomeImageId"><p class="card-text">Afbeelding id: @homeImage.HomeImageId</p></a>
+                   
+                @:</div>
+            @:</div>
+            if (count == 2)
+            {
+            @:</div>
+            @:<br />
+            @:<div class="card-deck">
+                count = 0;
+            }
+            else
+            {
+                count++;
+            }
+        }
+}

@@ -1,0 +1,95 @@
+@model List<Domain.OpeningsUur>
+
+@{
+    ViewBag.Title = "Openingsuren";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+<p>Een overzicht van alle openingsuren</p>
+<br/>
+<table class="table" id="table">
+    <tr class="noBorder" >
+        <td colspan="3"></td>
+        <th   style="text-align: center" colspan="2">Voormiddag</th>
+        <th   style="text-align: center" colspan="2">Namiddag</th>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <th>OpeningsuurId</th>
+                <th>Dag</th>
+                <th>Day</th>
+        <td style="text-align: center">Startuur</td>
+        <td style="text-align: center">Einduur</td>
+        <td style="text-align: center">Startuur</td>
+        <td style="text-align: center">Einduur</td>
+        <th style="text-align: center">Sluitingsdag</th>
+                <th style="text-align: center">Halve sluitingsdag</th>
+    </tr>
+
+    @foreach (Domain.OpeningsUur openingsUur in Model.ToList())
+    {
+        <tr class="text-auto-even">
+            <td>
+                <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditOpeningsuur" asp-route-id="@openingsUur.OpeningsUurId">
+                    <p class="card-text">@openingsUur.OpeningsUurId</p>
+                </a>
+            </td>
+            <td>
+                <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditOpeningsuur" asp-route-id="@openingsUur.OpeningsUurId">
+                    <p class="card-text">@openingsUur.Dag</p>
+                </a>
+            </td>
+            <td>
+                <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditOpeningsuur" asp-route-id="@openingsUur.OpeningsUurId">
+                    <p class="card-text">@openingsUur.DagVanDeWeek</p>
+                </a>
+            </td>
+            <td style="text-align: center">
+                <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditOpeningsuur" asp-route-id="@openingsUur.OpeningsUurId">
+                    <p class="card-text">@openingsUur.StartVoormiddag</p>
+                </a>
+            </td>
+            <td style="text-align: center">
+                <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditOpeningsuur" asp-route-id="@openingsUur.OpeningsUurId">
+                    <p class="card-text">@openingsUur.EindVoormiddag</p>
+                </a>
+            </td>
+            <td style="text-align: center">
+                <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditOpeningsuur" asp-route-id="@openingsUur.OpeningsUurId">
+                    <p class="card-text">@openingsUur.StartNamiddag</p>
+                </a>
+            </td>
+            <td style="text-align: center">
+                <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditOpeningsuur" asp-route-id="@openingsUur.OpeningsUurId">
+                    <p class="card-text">@openingsUur.EindNamiddag</p>
+                </a>
+            </td>
+            <td style="text-align: center">
+                @{
+                        if (@openingsUur.SluitingsDag)
+                        {
+                            <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditOpeningsuur" asp-route-id="@openingsUur.OpeningsUurId"><p class="card-text">Ja</p></a>
+                        }
+                        else
+                        {
+                            <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditOpeningsuur" asp-route-id="@openingsUur.OpeningsUurId"><p class="card-text">Nee</p></a>
+                        }
+                    }
+            </td>
+            <td style="text-align: center">
+                            @{
+                                    if (@openingsUur.SluitingsHalfDag)
+                                    {
+                                        <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditOpeningsuur" asp-route-id="@openingsUur.OpeningsUurId"><p class="card-text">Ja</p></a>
+                                    }
+                                    else
+                                    {
+                                        <a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditOpeningsuur" asp-route-id="@openingsUur.OpeningsUurId"><p class="card-text">Nee</p></a>
+                                    }
+                                }
+                        </td>
+
+        </tr>
+    }
+</table>

@@ -1,0 +1,28 @@
+﻿@model Domain.Allergie
+
+@{
+    ViewBag.Title = "Details van allergie";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title @Model.Naam</h2>
+<p>Bewerk de details van een @Model.Naam</p>
+
+
+<form asp-controller="Database" asp-action="EditAllergie" method="post">
+    <div class="div-container">
+        <div class="div-left">
+            <dl class="dl-horizontal">
+                <dt class="dd-dt"><label for="Naam">Naam</label></dt>
+                <dd class="dd-dt"><textarea asp-for="Naam" cols="125" rows="1" class="inputdetails"></textarea></dd>
+                <dt class="dd-dt"><label for="Beschrijving">Beschrijving</label></dt>
+                <dd class="dd-dt"><textarea asp-for="Beschrijving" cols="125" rows="5" class="inputdetails"></textarea></dd>
+            </dl>
+        </div>
+    </div>
+    <input class="sortBarCheckBoxes" type="hidden" asp-for="@Model.AllergieId" />
+    <div class="div-buttons">
+        <input type="submit" value="Opslaan" class="btn btn-dark" />&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="DeleteAllergie" asp-route-id="@Model.AllergieId">Verwijder</a>
+    </div>
+</form>

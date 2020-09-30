@@ -1,0 +1,23 @@
+@model Domain.Allergie
+
+@{
+    ViewBag.Title = "Nieuwe allergie";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+<p>Maak een nieuwe allergie</p>
+
+<form asp-controller="Database" asp-action="NewAllergie" method="post">
+    <div class="div-container">
+        <dl class="dl-horizontal">
+            <dt class="dd-dt"><label for="Naam">Naam</label></dt><dd class="dd-dt"><input asp-for="Naam" class="inputdetails"></input></dd>
+            <dt class="dd-dt"> <label for="Beschrijving">Beschrijving</label></dt><dd class="dd-dt"><textarea  asp-for="Beschrijving" cols="125" rows="5" class="inputdetails"></textarea ></dd>
+        </dl>
+    </div>
+      <div class="div-buttons">
+            <input type="submit" value="Opslaan" class="btn btn-dark"/>&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-dark" asp-controller="Database" asp-action="IndexAllergie" type="Submit">Annuleer</a>
+            </div>
+    </form>
+

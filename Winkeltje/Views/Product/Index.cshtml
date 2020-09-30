@@ -1,0 +1,114 @@
+@using Domain
+@model ProductIndexModel
+@{
+    ViewBag.Title = "Producten";
+    Layout = "_Layout";
+}
+<div class="sortBar">
+@{
+    int id = 1;
+    int countItems = Model.WinkelItems.Count - 2;
+    int colspan = countItems / 2;
+}
+    <div class="sortLeft sortBarCheckBoxes">
+        <form asp-controller="Product" asp-action="IndexNew" method="post">
+                <table>
+                    <tr>
+                        <th>
+                            &nbsp;&nbsp;
+                        </th>
+                        <th style="text-align: left;" colspan="@colspan">Sorteer per allergie</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            &nbsp;&nbsp;
+                        </th>
+                        @{
+                            for (int i = 0; i < @Model.WinkelItems.Count; i++)
+                            {
+                                <th>
+                                    <label asp-for="@Model.WinkelItems[i]">@Model.WinkelItems[i].Name</label>&nbsp;
+                                    <input class="sortBarCheckBoxes" type="checkbox" asp-for="@Model.WinkelItems[i].Selected" />
+                                    <input class="sortBarCheckBoxes" type="hidden" asp-for="@Model.WinkelItems[i].Id" />
+                                    <input class="sortBarCheckBoxes" type="hidden" asp-for="@Model.WinkelItems[i].Name" />
+                                    @if (i < @Model.WinkelItems.Count - 1)
+                                    {
+                                        @:&nbsp; | &nbsp;
+                                    }
+
+                                </th>
+                            }
+
+                            <th>&nbsp;&nbsp;&nbsp;<input type="submit" value="Sorteer" class="btn btn-dark" /></th>
+                        }
+                    </tr>
+                </table>
+            </form>
+    </div>
+    <div class="sortRight" class="sortBarCheckBoxes">
+        <table>
+            <tr>
+                <th style="text-align: left;">Zoek per naam</th>
+            </tr>
+            <tr>
+
+                <td style="text-align:end;">
+                    <form asp-controller="Product" asp-action="IndexSearch" method="post">
+                        <input asp-for="@Model.SearchString" class=""></input>&nbsp;
+                        <input type="submit" value="Zoek" class="btn btn-dark" />&nbsp;
+                    </form>
+                </td>
+            </tr>
+        </table>
+       
+    </div>
+</div>
+<br/>
+
+@{
+    int count = 0; 
+    @:<div class="card-deck">
+    foreach (Product product in @Model.Products)
+    {
+        @:<div class="card">
+        <img class="card-img-top"  src="@Url.Action("getImg", "Product", new {id = product.ProductId})" alt="@product.Naam" >
+        @:<div class="card-body">
+        <h5 class="card-title">@product.Naam</h5>
+        <p class="card-text">@product.Beschrijving</p>
+        @:<p class="card-text">
+        if (product.ProductAllergies.Count > 0)
+        {
+            @:<small class="text-muted">Allergenen:
+            string showThis = "";
+            foreach (ProductAllergie allergie in product.ProductAllergies)
+            {
+                if (!allergie.Allergie.Naam.Equals(product.ProductAllergies.Last().Allergie.Naam))
+                {
+                    showThis = allergie.Allergie.Naam + ", ";
+                    @showThis
+                }
+                else
+                {
+                    showThis = allergie.Allergie.Naam;
+                    @showThis
+                }
+            }
+
+            @:</small>
+        }
+        @:</p>
+        @:</div> 
+        @:</div>
+        if (count == 2)
+        {
+            @:</div>
+            @:<br/>
+            @:<div class="card-deck">
+            count = 0; 
+        }
+        else
+        {
+            count++;
+        }
+    }
+}

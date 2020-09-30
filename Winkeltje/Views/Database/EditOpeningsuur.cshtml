@@ -1,0 +1,41 @@
+﻿@model Domain.OpeningsUur
+
+@{
+    ViewBag.Title = "Openingsuur";
+    Layout = "_Layout";
+}
+
+<h2>Openingsuur @Model.Dag</h2>
+<h4>Opgelet! Elk uur noteren als volgt: UUR.MIN</h4>
+<br />
+
+<form asp-controller="Database" asp-action="EditOpeningsuur" method="post">
+    <div class="div-container">
+        <div class="div-left">
+            <dl class="dl-horizontal">
+                <dt class="dd-dt"><label for="Dag">Dag</label></dt>
+                <dd class="dd-dt"><textarea asp-for="Dag" cols="125" rows="1" class="inputdetails" disabled="true"></textarea></dd>
+                <dt class="dd-dt"><label for="DagVanDeWeek">Day</label></dt>
+                <dd class="dd-dt"><textarea asp-for="DagVanDeWeek" cols="125" rows="1" class="inputdetails" disabled="true"></textarea></dd>
+                <dt class="dd-dt"><label for="StartVoormiddag">Start voormiddag</label></dt>
+                <dd class="dd-dt"><textarea asp-for="StartVoormiddag" cols="125" rows="1" class="inputdetails"></textarea></dd>
+                <dt class="dd-dt"><label for="EindVoormiddag">Eind voormiddag</label></dt>
+                <dd class="dd-dt"><textarea asp-for="EindVoormiddag" cols="125" rows="1" class="inputdetails"></textarea></dd>
+                <dt class="dd-dt"><label for="StartNamiddag">Start namiddag</label></dt>
+                <dd class="dd-dt"><textarea asp-for="StartNamiddag" cols="125" rows="1" class="inputdetails"></textarea></dd>
+                <dt class="dd-dt"><label for="EindNamiddag">Eind namiddag</label></dt>
+                <dd class="dd-dt"><textarea asp-for="EindNamiddag" cols="125" rows="1" class="inputdetails"></textarea></dd>
+                <dt class="dd-dt"><label for="SluitingsDag">Sluitings dag</label></dt>
+                <dd class="dd-dt"><input asp-for="SluitingsDag" class="inputdetails"></input ></dd>
+                <dt class="dd-dt"><label for="SluitingsHalfDag">Halve sluitingsdag</label></dt>
+                <dd class="dd-dt"><input asp-for="SluitingsHalfDag" class="inputdetails"></input ></dd>
+
+            </dl>
+        </div>
+    </div>
+    <input class="sortBarCheckBoxes" type="hidden" asp-for="@Model.OpeningsUurId" />
+    <div class="div-buttons">
+        <input type="submit" value="Opslaan" class="btn btn-dark" />&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="IndexOpeningsuur">Annuleer</a>
+    </div>
+</form>

@@ -1,0 +1,26 @@
+@model List<Domain.Allergie>
+
+@{
+    ViewBag.Title = "Allergenen";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+<p>Een overzicht van alle allergenen</p>
+<br/>
+<table class="table" id="table">
+    <tr >
+        <th>AllergieId</th>
+        <th>Naam</th>
+        <th>Beschrijving</th>
+    </tr>
+    
+    @foreach (Domain.Allergie allergie in Model.ToList())
+    {
+        <tr class="text-auto-even">
+            <td><a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditAllergie" asp-route-id="@allergie.AllergieId"><p class="card-text">@allergie.AllergieId</p></a></td>
+            <td><a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditAllergie" asp-route-id="@allergie.AllergieId"><p class="card-text">@allergie.Naam</p></a></td>
+            <td><a class="text-auto-even" asp-area="" asp-controller="Database" asp-action="EditAllergie" asp-route-id="@allergie.AllergieId"><p class="card-text">@allergie.Beschrijving</p></a></td>
+        </tr>
+    }
+</table> 

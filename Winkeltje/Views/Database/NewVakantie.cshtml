@@ -1,0 +1,24 @@
+@model Domain.Vakantie
+
+@{
+    ViewBag.Title = "Nieuwe vakantie";
+    Layout = "_Layout";
+}
+
+<h2>Nieuwe vakantie</h2>
+<p>Maak een nieuwe vakantie aan.</p>
+<br/>
+
+<form asp-controller="Database" asp-action="NewVakantie" method="post">
+    <div class="div-container">
+        <dl class="dl-horizontal">
+            <dt class="dd-dt"><label for="startDatum">Start datum</label></dt><dd class="dd-dt"><input asp-for="startDatum" class="inputdetails"></input></dd>
+            <dt class="dd-dt"><label for="eindDatum">Eind datum</label></dt><dd class="dd-dt"><input asp-for="eindDatum" class="inputdetails"></input></dd>
+            <dt class="dd-dt"> <label for="reden">Reden</label></dt><dd class="dd-dt"><textarea  asp-for="reden" cols="125" rows="5" class="inputdetails"></textarea ></dd>
+        </dl>
+    </div>
+    <div class="div-buttons">
+        <input type="submit" value="Opslaan" class="btn btn-dark"/>&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-dark" asp-controller="Database" asp-action="IndexVakantie" type="Submit">Annuleer</a>
+    </div>
+</form>

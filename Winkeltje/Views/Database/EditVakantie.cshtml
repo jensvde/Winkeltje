@@ -1,0 +1,29 @@
+﻿@model Domain.Vakantie
+
+@{
+    ViewBag.Title = "Bewerk vakantie";
+    Layout = "_Layout";
+}
+
+<h2>Bewerk vakantie @Model.VakantieId</h2>
+<br />
+
+<form asp-controller="Database" asp-action="EditVakantie" method="post">
+    <div class="div-container">
+        <div class="div-left">
+            <dl class="dl-horizontal">
+                <dt class="dd-dt"><label for="startDatum">Start datum</label></dt>
+                <dd class="dd-dt"><input asp-for="startDatum" class="inputdetails"></input ></dd>
+                <dt class="dd-dt"><label for="eindDatum">Eind datum</label></dt>
+                <dd class="dd-dt"><input asp-for="eindDatum" class="inputdetails"></input ></dd>
+                <dt class="dd-dt"><label for="reden">Reden</label></dt>
+                <dd class="dd-dt"><textarea asp-for="reden" cols="125" rows="5" class="inputdetails"></textarea></dd>
+            </dl>
+        </div>
+    </div>
+    <input class="sortBarCheckBoxes" type="hidden" asp-for="@Model.VakantieId" />
+    <div class="div-buttons">
+        <input type="submit" value="Opslaan" class="btn btn-dark" />&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="DeleteVakantie" asp-route-id="@Model.VakantieId">Verwijder</a>
+    </div>
+</form>

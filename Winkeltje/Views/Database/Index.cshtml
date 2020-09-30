@@ -1,0 +1,82 @@
+@model ManagementModel
+
+@{
+    ViewBag.Title = "Database management";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <h2>Alle producten</h2>
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="IndexAdmin">Ga naar producten</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Product details</h2>
+        <form asp-controller="Database" asp-action="EditProduct" method="get">
+            <label for="Id">Bekijk de details van een product.</label>
+            <select asp-for="Id" asp-items="Model.ItemsProduct"></select>
+            <input type="submit" value="Ga" class="btn btn-dark" />
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h2>Nieuw product</h2>
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="NewProduct">Maak een nieuw product</a>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <h2>Alle allergenen</h2>
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="IndexAllergie">Ga naar allergenen</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Allergie details</h2>
+        <form asp-controller="Database" asp-action="EditAllergie" method="get">
+            <label for="Id">Bekijk de details van een allergie.</label><br>
+            <select asp-for="Id" asp-items="Model.Items"></select>
+            <input type="submit" value="Ga" class="btn btn-dark" />
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h2>Nieuwe allergie</h2>
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="NewAllergie">Maak een nieuwe allergie</a>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <h2>Alle openingsuren</h2>
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="IndexOpeningsuur">Ga naar openingsuren</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Alle vakantie</h2>
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="IndexVakantie">Ga naar vakanties</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Nieuwe vakantie</h2>
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="NewVakantie">Maak een nieuwe vakantie</a>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <h2>Alle start afbeeldingen</h2>
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="IndexHomeImage">Ga naar HomeImages</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Nieuwe startafbeelding </h2>
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="NewHomeImage">Maak een nieuwe afbeelding aan</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Gebruiker details</h2>
+        <a class="btn btn-dark" asp-area="Identity" asp-page="/Account/Manage/Index">Bekijk uw profiel</a>
+    </div>
+</div>

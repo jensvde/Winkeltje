@@ -1,0 +1,31 @@
+﻿@model HomeViewModel
+
+@{
+    ViewBag.Title = "Bewerk startpagina afbeeldingen";
+    Layout = "_Layout";
+}
+
+<h2>Bewerk afbeelding @Model.homeImage.HomeImageId</h2>
+<br />
+
+<form asp-controller="Database" asp-action="EditHomeImage" enctype="multipart/form-data" method="post">
+    <div class="div-container">
+        <div class="div-left">
+            <dl class="dl-horizontal">
+                <dt class="dd-dt"><label for="homeImage.HomeImageId">Id</label></dt>
+                <dd class="dd-dt"><textarea asp-for="homeImage.HomeImageId" cols="125" rows="1" class="inputdetails" disabled="true"></textarea></dd>
+                <dt class="dd-dt"><label for="homeImage.Text">Beschrijving</label></dt>
+                <dd class="dd-dt"><textarea asp-for="homeImage.Text" cols="125" rows="1" class="inputdetails"></textarea></dd>
+                <dt class="dd-dt"><label>Huidige afbeelding</label></dt>
+                <dd class="dd-dt"><img class="card-img-top" style="max-height: 50%" src="@Url.Action("getImg", "Home", new {id = @Model.homeImage.HomeImageId})" alt="@Model.homeImage.Text"></dd>
+                <dt class="dd-dt"><label for="ImageFile">Wijzig afbeelding</label></dt>
+                <dd class="dd-dt"><input asp-for="ImageFile" class="inputdetails" accept="image/*" /></dd>
+            </dl>
+        </div>
+    </div>
+    <input class="sortBarCheckBoxes" type="hidden" asp-for="@Model.homeImage.HomeImageId" />
+    <div class="div-buttons">
+        <input type="submit" value="Opslaan" class="btn btn-dark" />&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-dark" asp-area="" asp-controller="Database" asp-action="DeleteHomeImage" asp-route-id="@Model.homeImage.HomeImageId">Verwijder</a>
+    </div>
+</form>

@@ -1,0 +1,25 @@
+﻿@model HomeViewModel
+
+@{
+    ViewBag.Title = "Nieuwe startafbeelding";
+    Layout = "_Layout";
+}
+
+<h2>Nieuwe afbeelding</h2>
+<p>Maak een nieuwe startpagina afbeelding aan.</p>
+<br />
+
+<form asp-controller="Database" asp-action="NewHomeImage" enctype="multipart/form-data" method="post">
+    <div class="div-container">
+        <dl class="dl-horizontal">
+            <dt class="dd-dt"><label for="Naam">Naam</label></dt>
+            <dd class="dd-dt"><textarea asp-for="homeImage.Text" cols="125" rows="1" class="inputdetails"></textarea></dd>
+            <dt class="dd-dt"><label for="ImageFile">Afbeelding</label></dt>
+            <dd class="dd-dt"><input asp-for="ImageFile" class="inputdetails" accept="image/*" /></dd>
+        </dl>
+    </div>
+    <div class="div-buttons">
+        <input type="submit" value="Opslaan" class="btn btn-dark" />&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-dark" asp-controller="Database" asp-action="IndexHomeImage" type="Submit">Annuleer</a>
+    </div>
+</form>

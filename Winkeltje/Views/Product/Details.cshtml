@@ -1,0 +1,50 @@
+@using Domain
+@model WinkelViewModel
+@{
+    ViewBag.Title = Model.Product.Naam;
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+<p>Bekijk de details voor @Model.Product.Naam</p>
+<br/>
+<h3>Productdetails</h3>
+    <div class="div-container">
+        <div class="div-left">
+            <dl class="dl-horizontal">
+                <dt class="dd-dt"><label for="Naam">Naam</label></dt><dd class="dd-dt"><textarea  asp-for="Product.Naam" cols="125" rows="1" class="inputdetails" disabled="true"></textarea ></dd>
+                <dt class="dd-dt"><label for="Beschrijving">Beschrijving</label></dt><dd class="dd-dt"><textarea  asp-for="Product.Beschrijving" cols="125" rows="5" class="inputdetails" disabled="true"></textarea ></dd>
+                <dt class="dd-dt"><label>Afbeelding</label></dt><dd class="dd-dt"><img class="card-img-top" style="max-height: 50%" src="@Url.Action("getImg", "Product", new {id = @Model.Product.ProductId})" disabled="true" alt="@Model.Product.Naam" ></dd>
+            </dl>
+        </div>
+    </div>
+    <h3>Allergenen</h3>
+        <div class="div-container">
+            <div class="div-right">
+                <dl class="dl-horizontal">    
+                    @{
+                        for (int i = 0; i < Model.SelectedAllergies.Count; i++)
+                        {
+                            if (i % 2 == 0 && i!=0)
+                            {
+                                @:</dl>
+                                @:</div>
+                                @:<div class="div-right">
+                                @:<dl class="dl-horizontal"> 
+                            }
+                        
+                            <dt class="dd-dt">
+                                <label asp-for="@Model.SelectedAllergies[i].Selected">@Model.SelectedAllergies[i].Name</label>
+                            </dt>
+                            <dd class="dd-dt">
+                                <input type="checkbox" asp-for="@Model.SelectedAllergies[i].Selected" disabled="true" />
+                                <input type="hidden" asp-for="@Model.SelectedAllergies[i].Id" disabled="true" />
+                                <input type="hidden" asp-for="@Model.SelectedAllergies[i].Name" disabled="true"/>
+                            </dd>
+
+                        }
+                    }
+                </dl>
+            </div>
+        </div>
+

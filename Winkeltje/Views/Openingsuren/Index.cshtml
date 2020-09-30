@@ -1,0 +1,44 @@
+@using Domain
+@model OpeningsurenModel
+
+@{
+    ViewBag.Title = "Openingsuren";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+<br/>
+@{
+    if (Model.HeeftVakantie)
+    {
+        <p>@Model.Vakantie.GetVakantieString()</p>
+    }else if (Model.IsGeopend)
+    {
+        <p>De winkel is geopend!</p>
+    }
+    else
+    {
+        <p>De winkel is gesloten!</p>
+    }
+}
+<table class="table" id="table">
+    <tr>
+        <th>Dag van de week</th>
+        <th style="text-align: center">Voormiddag</th>
+        <th></th>
+        <th style="text-align: center">Namiddag</th>
+    </tr>
+    
+    @{
+        foreach (OpeningsUur openingsUur in @Model.OpeningsUren)
+        {
+            <tr>
+                <td>@openingsUur.Dag</td>
+            
+                <td style="text-align: center">@openingsUur.getVoormiddagString(openingsUur.Dag)</td>
+                <td></td>
+                <td style="text-align: center">@openingsUur.getNamiddagString(openingsUur.Dag)</td>
+            </tr>
+        }
+    }
+</table>
