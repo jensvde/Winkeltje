@@ -23,7 +23,7 @@ namespace DAL.EF
         {
           //  optionsBuilder.UseSqlite("Data Source=TwinkeltjeDb_EFCodeFirst1.db")
          // optionsBuilder.UseSqlite("Data Source=TwinkeltjeDb_EFCodeFirst2.db");
-        optionsBuilder.UseMySql("server=localhost;port=3306;database=db;uid=winkel;password=Winkeltje@1234");
+        optionsBuilder.UseMySql("server=localhost;port=3306;database=db;uid=winkel;password=Winkeltje@1234;persistsecurityinfo=True");
             
         }
 
