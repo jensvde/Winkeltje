@@ -39,8 +39,6 @@ namespace Winkeltje
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
-            services.AddDataProtection()
-               .PersistKeysToFileSystem(new DirectoryInfo(@"\\UNC-PATH"));
             services.Configure<ForwardedHeadersOptions>(options =>
             {
                 options.KnownProxies.Add(IPAddress.Parse("35.210.167.58"));
