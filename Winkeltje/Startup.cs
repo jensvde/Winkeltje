@@ -15,6 +15,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
 using System.Net;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.AspNetCore.DataProtection;
+using System.IO;
 
 namespace Winkeltje
 {
@@ -37,6 +39,8 @@ namespace Winkeltje
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddDataProtection()
+               .PersistKeysToFileSystem(new DirectoryInfo(@"\\UNC-PATH"));
             services.Configure<ForwardedHeadersOptions>(options =>
             {
                 options.KnownProxies.Add(IPAddress.Parse("35.210.167.58"));
