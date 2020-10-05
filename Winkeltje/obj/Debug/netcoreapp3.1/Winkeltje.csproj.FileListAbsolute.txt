@@ -82,9 +82,6 @@ C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\bin\Debug\netcoreapp3.1\
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\bin\Debug\netcoreapp3.1\MySqlConnector.dll
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
-C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Winkeltje.csproj.CoreCompileInputs.cache
-C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Winkeltje.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Winkeltje.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Winkeltje.Views.pdb
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Winkeltje.dll
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Winkeltje.pdb
@@ -146,3 +143,10 @@ C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Razor\Views\Database\EditHomeImage.cshtml.g.cs
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Razor\Views\Database\IndexHomeImage.cshtml.g.cs
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Razor\Views\Database\NewHomeImage.cshtml.g.cs
+C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\bin\Debug\netcoreapp3.1\System.Web.Providers.dll
+C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.Core.dll
+C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Winkeltje.csproj.CoreCompileInputs.cache
+C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Winkeltje.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jens\source\repos\DeWinkel\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Winkeltje.MvcApplicationPartsAssemblyInfo.cache
