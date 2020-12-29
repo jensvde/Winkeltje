@@ -25,3 +25,12 @@ C:\Users\jens\source\repos\DeWinkel\Winkeltje\Domain\obj\Debug\netstandard2.0\Do
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\Domain\obj\Debug\netstandard2.0\Domain.dll
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\Domain\obj\Debug\netstandard2.0\Domain.pdb
+E:\GitHub\Winkeltje\Domain\bin\Debug\netstandard2.0\Domain.deps.json
+E:\GitHub\Winkeltje\Domain\bin\Debug\netstandard2.0\Domain.dll
+E:\GitHub\Winkeltje\Domain\bin\Debug\netstandard2.0\Domain.pdb
+E:\GitHub\Winkeltje\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+E:\GitHub\Winkeltje\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+E:\GitHub\Winkeltje\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+E:\GitHub\Winkeltje\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
+E:\GitHub\Winkeltje\Domain\obj\Debug\netstandard2.0\Domain.dll
+E:\GitHub\Winkeltje\Domain\obj\Debug\netstandard2.0\Domain.pdb

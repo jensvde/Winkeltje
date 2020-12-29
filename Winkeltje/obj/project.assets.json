@@ -8640,23 +8640,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jens\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Jens\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jens\\source\\repos\\DeWinkel\\Winkeltje\\Winkeltje\\Winkeltje.csproj",
+      "projectUniqueName": "E:\\GitHub\\Winkeltje\\Winkeltje\\Winkeltje.csproj",
       "projectName": "Winkeltje",
-      "projectPath": "C:\\Users\\jens\\source\\repos\\DeWinkel\\Winkeltje\\Winkeltje\\Winkeltje.csproj",
-      "packagesPath": "C:\\Users\\jens\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jens\\source\\repos\\DeWinkel\\Winkeltje\\Winkeltje\\obj\\",
+      "projectPath": "E:\\GitHub\\Winkeltje\\Winkeltje\\Winkeltje.csproj",
+      "packagesPath": "C:\\Users\\Jens\\.nuget\\packages\\",
+      "outputPath": "E:\\GitHub\\Winkeltje\\Winkeltje\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\jens\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jens\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8668,12 +8664,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\jens\\source\\repos\\DeWinkel\\Winkeltje\\BL\\BL.csproj": {
-              "projectPath": "C:\\Users\\jens\\source\\repos\\DeWinkel\\Winkeltje\\BL\\BL.csproj"
+            "E:\\GitHub\\Winkeltje\\BL\\BL.csproj": {
+              "projectPath": "E:\\GitHub\\Winkeltje\\BL\\BL.csproj"
             },
-            "C:\\Users\\jens\\source\\repos\\DeWinkel\\Winkeltje\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\jens\\source\\repos\\DeWinkel\\Winkeltje\\Domain\\Domain.csproj"
+            "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj": {
+              "projectPath": "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj"
             }
           }
         }
@@ -8686,6 +8683,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNet.Identity.Core": {
             "target": "Package",
@@ -8730,12 +8728,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.2, 3.1.2]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -8744,7 +8736,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   },

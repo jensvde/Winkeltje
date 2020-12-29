@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using BL;
 using Domain;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using winkeltje.Models;
@@ -58,7 +59,42 @@ namespace Winkeltje.Controllers
             return View(model);
         }
 
+        [HttpGet("/Database/Upload/")]
+        public IActionResult Upload()
+        {
+            return View();
+        }
+        public ActionResult Download()
+        {
+            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\db.db";
+            string fileName = "db.db";
 
+            byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
+
+            return File(fileBytes, "application/force-download", fileName);
+
+        }
+
+        [HttpPost("/Database/Upload/")]
+        public async Task<IActionResult> Upload(IFormFile formFile)
+        {
+            long size = formFile.Length;
+            string filePath = "";
+
+            if (formFile.Length > 0)
+            {
+                // full path to file in temp location
+                filePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile); //we are using Temp file name just for the example. Add your own file path.
+                using (var stream = new FileStream(filePath + "\\db.db", FileMode.Create))
+                {
+                    await formFile.CopyToAsync(stream);
+                }
+            }
+
+            // process uploaded files
+            // Don't rely on or trust the FileName property without validation.
+            return Ok(new { size, filePath });
+        }
 
         [HttpGet("/Database/DeleteProduct/{id:int?}")]
         public IActionResult DeleteProduct(int id)

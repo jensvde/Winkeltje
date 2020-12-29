@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Upload";
+    Layout = "_Layout";
+}
+
+<h2>Importeer database</h2>
+<p>Upload hier uw db.db file die de bestaande database moet vervangen.</p>
+<br />
+
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="formFile" />
+    <button type="submit">Upload</button>
+</form>
