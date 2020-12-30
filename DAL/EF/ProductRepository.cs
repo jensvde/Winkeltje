@@ -12,7 +12,7 @@ namespace DAL.EF
         public ProductRepository()
         {
             ctx = new TwinkeltjeDbContext();
-            TwinkeltjeDbContext.Initialize(ctx, true);
+           // TwinkeltjeDbContext.Initialize(ctx, true);
         }
         
         public Product CreateProduct(Product product)
