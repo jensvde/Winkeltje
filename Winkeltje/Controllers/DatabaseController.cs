@@ -96,7 +96,7 @@ namespace Winkeltje.Controllers
             if (formFile.Length > 0)
             {
                 // full path to file in temp location
-                filePath = Environment.UserName + "/db_users.db"; //we are using Temp file name just for the example. Add your own file path.
+                filePath = "/home/" + Environment.UserName + "/db_users.db"; //we are using Temp file name just for the example. Add your own file path.
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
                     await formFile.CopyToAsync(stream);
@@ -116,7 +116,7 @@ namespace Winkeltje.Controllers
             if (formFile.Length > 0)
             {
                 // full path to file in temp location
-                filePath = Environment.UserName + "/db.db"; //we are using Temp file name just for the example. Add your own file path.
+                filePath = "/home/" + Environment.UserName + "/db.db"; //we are using Temp file name just for the example. Add your own file path.
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
                     await formFile.CopyToAsync(stream);
