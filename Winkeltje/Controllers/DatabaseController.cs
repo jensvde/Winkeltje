@@ -79,7 +79,7 @@ namespace Winkeltje.Controllers
         [HttpGet("/Database/Test/")]
         public async Task<IActionResult> TestAsync()
         {
-                await $"/home/{Environment.UserName}/ConfigurationWinkeltje/mysql.sh db /home/{Environment.UserName}/ConfigurationWinkeltje/db.db".Bash();
+                await $"/home/{Environment.UserName}/ConfigurationWinkeltje/mysql.sh db /home/{Environment.UserName}/ConfigurationWinkeltje/db_OK.db".Bash();
                 return Ok();
         }
         public async Task<IActionResult> UploadDbUsers(IFormFile formFile)
