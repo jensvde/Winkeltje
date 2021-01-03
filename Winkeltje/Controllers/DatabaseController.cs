@@ -65,21 +65,25 @@ namespace Winkeltje.Controllers
         {
             return View();
         }
-        public ActionResult Download()
+
+        public async Task Download()
         {
-            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\db.db";
-            string fileName = "db.db";
-
+            await DownloadAsync("db");
+            await DownloadAsync("db_users");
+        }
+        public async Task<ActionResult> DownloadAsync(string database)
+        {
+            await $"/home/{Environment.UserName}/mysql.sh --export {database} /home/{Environment.UserName}/{database}.db".Bash();
+            string filePath = Environment.UserName + database + ".db";
+            string fileName = database + ".db";
             byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
-
             return File(fileBytes, "application/force-download", fileName);
-
         }
 
         [HttpGet("/Database/Test/")]
         public async Task<IActionResult> TestAsync()
         {
-                await $"/home/{Environment.UserName}/ConfigurationWinkeltje/mysql.sh db /home/{Environment.UserName}/ConfigurationWinkeltje/db_OK.db".Bash();
+                await $"/home/{Environment.UserName}/mysql.sh --import db /home/{Environment.UserName}/db.db".Bash();
                 return Ok();
         }
         public async Task<IActionResult> UploadDbUsers(IFormFile formFile)
