@@ -85,7 +85,7 @@ namespace Winkeltje.Controllers
         [HttpGet("/Database/Reboot/")]
         public async Task<IActionResult> RebootAsync()
         {
-            await $"/home/{Environment.UserName}/mysql.sh --restart".Bash();
+            await $"shutdown -ar now".Bash();
                 return RedirectToAction("Index", "Home");
         }
         public async Task<IActionResult> UploadDbUsers(IFormFile formFile)
