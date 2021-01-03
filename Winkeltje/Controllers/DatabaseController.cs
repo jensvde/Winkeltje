@@ -66,12 +66,14 @@ namespace Winkeltje.Controllers
             return View();
         }
 
-        public async Task Download()
+        [HttpGet("/Database/Download/")]
+        public IActionResult Download()
         {
-            await DownloadAsync("db");
-            await DownloadAsync("db_users");
+            return View();
         }
-        public async Task<ActionResult> DownloadAsync(string database)
+
+        [HttpGet("/Database/DbExport/")]
+        public async Task<ActionResult> DbExport(string database)
         {
             await $"/home/{Environment.UserName}/mysql.sh --export {database} /home/{Environment.UserName}/{database}.db".Bash();
             string filePath = Environment.UserName + database + ".db";
@@ -94,15 +96,16 @@ namespace Winkeltje.Controllers
             if (formFile.Length > 0)
             {
                 // full path to file in temp location
-                filePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile); //we are using Temp file name just for the example. Add your own file path.
-                using (var stream = new FileStream(filePath + "\\db_users.db", FileMode.Create))
+                filePath = Environment.UserName + "/db_users.db"; //we are using Temp file name just for the example. Add your own file path.
+                using (var stream = new FileStream(filePath, FileMode.Create))
                 {
                     await formFile.CopyToAsync(stream);
                 }
             }
-
+            await $"/home/{Environment.UserName}/mysql.sh --import db /home/{Environment.UserName}/db.db".Bash();
             // process uploaded files
             // Don't rely on or trust the FileName property without validation.
+
             return Ok(new { size, filePath });
         }
         public async Task<IActionResult> UploadDb(IFormFile formFile)
@@ -113,16 +116,17 @@ namespace Winkeltje.Controllers
             if (formFile.Length > 0)
             {
                 // full path to file in temp location
-                filePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile); //we are using Temp file name just for the example. Add your own file path.
-                using (var stream = new FileStream(filePath + "\\db.db", FileMode.Create))
+                filePath = Environment.UserName + "/db.db"; //we are using Temp file name just for the example. Add your own file path.
+                using (var stream = new FileStream(filePath, FileMode.Create))
                 {
                     await formFile.CopyToAsync(stream);
                 }
             }
 
+            await $"/home/{Environment.UserName}/mysql.sh --import db_users /home/{Environment.UserName}/db_users.db".Bash();
             // process uploaded files
             // Don't rely on or trust the FileName property without validation.
-            return Ok(new { size, filePath });
+            return Ok(new { size, filePath});
         }
 
         [HttpGet("/Database/DeleteProduct/{id:int?}")]

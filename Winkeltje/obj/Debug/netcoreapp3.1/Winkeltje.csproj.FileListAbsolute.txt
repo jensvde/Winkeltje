@@ -301,3 +301,4 @@ E:\GitHub\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Winkeltje.dll
 E:\GitHub\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Winkeltje.pdb
 E:\GitHub\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Winkeltje.genruntimeconfig.cache
 E:\GitHub\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Razor\Views\Database\Upload.cshtml.g.cs
+E:\GitHub\Winkeltje\Winkeltje\obj\Debug\netcoreapp3.1\Razor\Views\Database\Download.cshtml.g.cs
