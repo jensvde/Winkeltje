@@ -7548,11 +7548,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitHub\\WInkeltje\\DAL\\DAL.csproj",
+      "projectUniqueName": "E:\\GitHub\\Winkeltje\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "E:\\GitHub\\WInkeltje\\DAL\\DAL.csproj",
+      "projectPath": "E:\\GitHub\\Winkeltje\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\Jens\\.nuget\\packages\\",
-      "outputPath": "E:\\GitHub\\WInkeltje\\DAL\\obj\\",
+      "outputPath": "E:\\GitHub\\Winkeltje\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jens\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7569,8 +7569,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj": {
-              "projectPath": "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj"
+            "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj": {
+              "projectPath": "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj"
             }
           }
         }

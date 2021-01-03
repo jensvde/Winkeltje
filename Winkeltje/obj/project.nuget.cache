@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UJcEMrtDdLlqTrn78aMvOTko/2xF2B1Dlap+BJ2osqzkOuMYmCvsUZtmGXEEhfIDvwyT6j2UYhwOZTC2/ogY3g==",
+  "dgSpecHash": "pqnv9j4MqOnvA21lTdm8Nc2fcR5Hx8cLiiNAdfBnYVe5It+ts8Ct84Ztw9gSBmcll0C/x87g/zsjsNuOGLaVnQ==",
   "success": true,
-  "projectFilePath": "E:\\GitHub\\WInkeltje\\Winkeltje\\Winkeltje.csproj",
+  "projectFilePath": "E:\\GitHub\\Winkeltje\\Winkeltje\\Winkeltje.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jens\\.nuget\\packages\\entityframework\\6.0.0\\entityframework.6.0.0.nupkg.sha512",
     "C:\\Users\\Jens\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",

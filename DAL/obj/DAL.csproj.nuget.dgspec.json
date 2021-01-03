@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GitHub\\WInkeltje\\DAL\\DAL.csproj": {}
+    "E:\\GitHub\\Winkeltje\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "E:\\GitHub\\WInkeltje\\DAL\\DAL.csproj": {
+    "E:\\GitHub\\Winkeltje\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitHub\\WInkeltje\\DAL\\DAL.csproj",
+        "projectUniqueName": "E:\\GitHub\\Winkeltje\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "E:\\GitHub\\WInkeltje\\DAL\\DAL.csproj",
+        "projectPath": "E:\\GitHub\\Winkeltje\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\Jens\\.nuget\\packages\\",
-        "outputPath": "E:\\GitHub\\WInkeltje\\DAL\\obj\\",
+        "outputPath": "E:\\GitHub\\Winkeltje\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jens\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj": {
-                "projectPath": "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj"
+              "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj": {
+                "projectPath": "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj": {
+    "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj",
+        "projectUniqueName": "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj",
+        "projectPath": "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Jens\\.nuget\\packages\\",
-        "outputPath": "E:\\GitHub\\WInkeltje\\Domain\\obj\\",
+        "outputPath": "E:\\GitHub\\Winkeltje\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jens\\AppData\\Roaming\\NuGet\\NuGet.Config",

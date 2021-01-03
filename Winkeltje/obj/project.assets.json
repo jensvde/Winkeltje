@@ -8645,11 +8645,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitHub\\WInkeltje\\Winkeltje\\Winkeltje.csproj",
+      "projectUniqueName": "E:\\GitHub\\Winkeltje\\Winkeltje\\Winkeltje.csproj",
       "projectName": "Winkeltje",
-      "projectPath": "E:\\GitHub\\WInkeltje\\Winkeltje\\Winkeltje.csproj",
+      "projectPath": "E:\\GitHub\\Winkeltje\\Winkeltje\\Winkeltje.csproj",
       "packagesPath": "C:\\Users\\Jens\\.nuget\\packages\\",
-      "outputPath": "E:\\GitHub\\WInkeltje\\Winkeltje\\obj\\",
+      "outputPath": "E:\\GitHub\\Winkeltje\\Winkeltje\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jens\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8666,11 +8666,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\GitHub\\WInkeltje\\BL\\BL.csproj": {
-              "projectPath": "E:\\GitHub\\WInkeltje\\BL\\BL.csproj"
+            "E:\\GitHub\\Winkeltje\\BL\\BL.csproj": {
+              "projectPath": "E:\\GitHub\\Winkeltje\\BL\\BL.csproj"
             },
-            "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj": {
-              "projectPath": "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj"
+            "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj": {
+              "projectPath": "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj"
             }
           }
         }
