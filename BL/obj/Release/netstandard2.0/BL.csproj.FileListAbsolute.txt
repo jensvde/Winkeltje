@@ -12,3 +12,17 @@ C:\Users\jens\source\repos\DeWinkel\Winkeltje\BL\obj\Release\netstandard2.0\BL.c
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\BL\obj\Release\netstandard2.0\BL.csproj.CopyComplete
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\BL\obj\Release\netstandard2.0\BL.dll
 C:\Users\jens\source\repos\DeWinkel\Winkeltje\BL\obj\Release\netstandard2.0\BL.pdb
+E:\GitHub\Winkeltje\BL\bin\Release\netstandard2.0\BL.deps.json
+E:\GitHub\Winkeltje\BL\bin\Release\netstandard2.0\BL.dll
+E:\GitHub\Winkeltje\BL\bin\Release\netstandard2.0\BL.pdb
+E:\GitHub\Winkeltje\BL\bin\Release\netstandard2.0\DAL.dll
+E:\GitHub\Winkeltje\BL\bin\Release\netstandard2.0\Domain.dll
+E:\GitHub\Winkeltje\BL\bin\Release\netstandard2.0\DAL.pdb
+E:\GitHub\Winkeltje\BL\bin\Release\netstandard2.0\Domain.pdb
+E:\GitHub\Winkeltje\BL\obj\Release\netstandard2.0\BL.csprojAssemblyReference.cache
+E:\GitHub\Winkeltje\BL\obj\Release\netstandard2.0\BL.AssemblyInfoInputs.cache
+E:\GitHub\Winkeltje\BL\obj\Release\netstandard2.0\BL.AssemblyInfo.cs
+E:\GitHub\Winkeltje\BL\obj\Release\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+E:\GitHub\Winkeltje\BL\obj\Release\netstandard2.0\BL.csproj.CopyComplete
+E:\GitHub\Winkeltje\BL\obj\Release\netstandard2.0\BL.dll
+E:\GitHub\Winkeltje\BL\obj\Release\netstandard2.0\BL.pdb
