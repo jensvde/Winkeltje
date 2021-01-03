@@ -76,7 +76,7 @@ namespace Winkeltje.Controllers
         public async Task<ActionResult> DbExport(string Database)
         {
             await $"/home/{Environment.UserName}/mysql.sh --export {Database} /home/{Environment.UserName}/{Database}.db".Bash();
-            string filePath = Environment.UserName + "/" + Database + ".db";
+            string filePath = "/home/" + Environment.UserName + "/" + Database + ".db";
             string fileName = Database + ".db";
             byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
             return File(fileBytes, "application/force-download", fileName);
