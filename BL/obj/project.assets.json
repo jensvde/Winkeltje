@@ -7567,11 +7567,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitHub\\Winkeltje\\BL\\BL.csproj",
+      "projectUniqueName": "E:\\GitHub\\WInkeltje\\BL\\BL.csproj",
       "projectName": "BL",
-      "projectPath": "E:\\GitHub\\Winkeltje\\BL\\BL.csproj",
+      "projectPath": "E:\\GitHub\\WInkeltje\\BL\\BL.csproj",
       "packagesPath": "C:\\Users\\Jens\\.nuget\\packages\\",
-      "outputPath": "E:\\GitHub\\Winkeltje\\BL\\obj\\",
+      "outputPath": "E:\\GitHub\\WInkeltje\\BL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jens\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7588,11 +7588,11 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "E:\\GitHub\\Winkeltje\\DAL\\DAL.csproj": {
-              "projectPath": "E:\\GitHub\\Winkeltje\\DAL\\DAL.csproj"
+            "E:\\GitHub\\WInkeltje\\DAL\\DAL.csproj": {
+              "projectPath": "E:\\GitHub\\WInkeltje\\DAL\\DAL.csproj"
             },
-            "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj": {
-              "projectPath": "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj"
+            "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj": {
+              "projectPath": "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj"
             }
           }
         }

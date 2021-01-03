@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using winkeltje.Models;
+using Winkeltje.Helpers;
 using Winkeltje.Models;
 
 namespace Winkeltje.Controllers
@@ -75,8 +76,32 @@ namespace Winkeltje.Controllers
 
         }
 
-        [HttpPost("/Database/Upload/")]
-        public async Task<IActionResult> Upload(IFormFile formFile)
+        [HttpGet("/Database/Test/")]
+        public async Task<IActionResult> TestAsync()
+        {
+            await $"$USER/0.sh".Bash();
+            return Ok();
+        }
+        public async Task<IActionResult> UploadDbUsers(IFormFile formFile)
+        {
+            long size = formFile.Length;
+            string filePath = "";
+
+            if (formFile.Length > 0)
+            {
+                // full path to file in temp location
+                filePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile); //we are using Temp file name just for the example. Add your own file path.
+                using (var stream = new FileStream(filePath + "\\db_users.db", FileMode.Create))
+                {
+                    await formFile.CopyToAsync(stream);
+                }
+            }
+
+            // process uploaded files
+            // Don't rely on or trust the FileName property without validation.
+            return Ok(new { size, filePath });
+        }
+        public async Task<IActionResult> UploadDb(IFormFile formFile)
         {
             long size = formFile.Length;
             string filePath = "";

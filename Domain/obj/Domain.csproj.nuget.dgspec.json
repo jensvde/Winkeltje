@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj": {}
+    "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj": {
+    "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj",
+        "projectUniqueName": "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "E:\\GitHub\\Winkeltje\\Domain\\Domain.csproj",
+        "projectPath": "E:\\GitHub\\WInkeltje\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Jens\\.nuget\\packages\\",
-        "outputPath": "E:\\GitHub\\Winkeltje\\Domain\\obj\\",
+        "outputPath": "E:\\GitHub\\WInkeltje\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jens\\AppData\\Roaming\\NuGet\\NuGet.Config",
