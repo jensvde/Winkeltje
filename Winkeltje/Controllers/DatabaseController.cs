@@ -77,7 +77,7 @@ namespace Winkeltje.Controllers
         {
             await $"/home/{Environment.UserName}/mysql.sh --export {Database} /home/{Environment.UserName}/{Database}.db".Bash();
             string filePath = "/home/" + Environment.UserName + "/" + Database + ".db";
-            string fileName = Database + DateTime.Now.ToString("dd-mm-yyyy hh:mm:ss") + ".db";
+            string fileName = Database + "_" + DateTime.Now.ToString("dd-MM-yyyy_hh-mm-ss") + ".db";
             byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
             return File(fileBytes, "application/force-download", fileName);
         }
