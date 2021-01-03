@@ -82,11 +82,11 @@ namespace Winkeltje.Controllers
             return File(fileBytes, "application/force-download", fileName);
         }
 
-        [HttpGet("/Database/Test/")]
-        public async Task<IActionResult> TestAsync()
+        [HttpGet("/Database/Reboot/")]
+        public async Task<IActionResult> RebootAsync()
         {
-                await $"/home/{Environment.UserName}/mysql.sh --import db /home/{Environment.UserName}/db.db".Bash();
-                return Ok();
+                await $"sudo reboot".Bash();
+                return RedirectToAction("Index", "Home");
         }
         public async Task<IActionResult> UploadDbUsers(IFormFile formFile)
         {
@@ -102,11 +102,13 @@ namespace Winkeltje.Controllers
                     await formFile.CopyToAsync(stream);
                 }
             }
-            await $"/home/{Environment.UserName}/mysql.sh --import db /home/{Environment.UserName}/db.db".Bash();
+            await $"/home/{Environment.UserName}/mysql.sh --import db_users /home/{Environment.UserName}/db_users.db".Bash();
             // process uploaded files
             // Don't rely on or trust the FileName property without validation.
 
-            return Ok(new { size, filePath });
+            //return Ok(new { size, filePath });
+            return RedirectToAction("IndexAdmin", "Database");
+
         }
         public async Task<IActionResult> UploadDb(IFormFile formFile)
         {
@@ -123,10 +125,11 @@ namespace Winkeltje.Controllers
                 }
             }
 
-            await $"/home/{Environment.UserName}/mysql.sh --import db_users /home/{Environment.UserName}/db_users.db".Bash();
+            await $"/home/{Environment.UserName}/mysql.sh --import db /home/{Environment.UserName}/db.db".Bash();
             // process uploaded files
             // Don't rely on or trust the FileName property without validation.
-            return Ok(new { size, filePath});
+            //return Ok(new { size, filePath});
+            return RedirectToAction("IndexAdmin", "Database");
         }
 
         [HttpGet("/Database/DeleteProduct/{id:int?}")]
