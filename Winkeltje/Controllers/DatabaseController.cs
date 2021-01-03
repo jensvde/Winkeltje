@@ -79,8 +79,15 @@ namespace Winkeltje.Controllers
         [HttpGet("/Database/Test/")]
         public async Task<IActionResult> TestAsync()
         {
-            await $"$USER/0.sh".Bash();
-            return Ok();
+            try
+            {
+                await $"$USER/0.sh".Bash();
+            }
+            catch (Exception e)
+            {
+                return Ok(e.Message);
+            }
+                return Ok();
         }
         public async Task<IActionResult> UploadDbUsers(IFormFile formFile)
         {
