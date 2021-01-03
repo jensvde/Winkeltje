@@ -81,7 +81,7 @@ namespace Winkeltje.Controllers
         {
             try
             {
-                await $"/home/jens/0.sh".Bash();
+                await $"/home/{Environment.UserName}/0.sh".Bash();
             }
             catch (Exception e)
             {
